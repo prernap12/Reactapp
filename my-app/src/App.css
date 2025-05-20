@@ -14,8 +14,8 @@
 }
 
 :root{
-    --green:#2eeea2;
-    --dark-color:#12e590;
+    --blue:#19056b;
+    --dark-color:#0b0168;
     --black:#444;
     --light-color:#666;
     --border:0.1rem solid rgba(0,0,0,0.1);
@@ -25,7 +25,7 @@
 
 html{
     font-size: 62.5%;
-    overflow: hidden;
+    overflow-x: hidden;
     scroll-padding-top:5rem ;
     scroll-behavior: smooth;
 
@@ -51,7 +51,7 @@ html ::-webkit-scrollbar{
   .header .header_one .logo{
     font-size: 2.5rem;
     font-weight: bolder;
-    color: var(--green);
+    color: var(--blue);
   }
 
   .header .header_one .search-form{
@@ -83,7 +83,7 @@ html ::-webkit-scrollbar{
         cursor: pointer;
       }
         .header .header_one .search-form label:hover{
-            color: var(--green);
+            color: var(--blue);
         }
         .header .header_one .icons{
             display: flex;
@@ -98,14 +98,14 @@ html ::-webkit-scrollbar{
         }
         .header .header_one .icons div,
         .header .header_one .icons a:hover{
-            color: var(--green);
+            color: var(--blue);
         }
         #search-btn{
             display: none ;
 
         }
          .header .header_two{
-            background: var(--green);
+            background: var(--blue);
          }
           .header .header_two .navbar{
             text-align: center;
@@ -121,22 +121,172 @@ html ::-webkit-scrollbar{
 
             }
 
+
+
+
             /*-----Bottom NAvbar*/
+
             .bottom-navbar{
                 text-align: center;
-                background: var(--green);
+                background: var(--blue);
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 z-index: 1000;
                 padding: 1rem 0;
+                display: none;
             }
             .bottom-navbar a{
                 font-size: 2.5rem;
                 padding: 1rem 2rem;
-                color: #ffffff;
+                color: #912e2e;
             }
             .bottom-navbar a:hover{
                 background: var(--dark-color);
             }
+            body.login-active .bottom-navbar {
+              display: none;
+            }
+            
+              .bottom-navbar.show {
+             display: block; /* Only show when this class is added */
+            } 
+
+            @media(max-width:991px){
+              html{
+                font-size: 55%;
+              
+            }
+            .header .header_one{
+              padding: 2rem;
+            }
+          }
+          @media(max-width:768px){
+            html{
+              scroll-padding-top:0;
+            }
+            body{
+              padding-bottom: 6rem;
+            }
+            .header .header_two{
+              display: none;
+            }
+            .header .header_one{
+              box-shadow: var(--box-shadow);
+              position:relative;
+            }
+            .header .header_one .search-form{
+              display: none;
+            }
+            #search-btn{
+              display: inline-block;
+            }
+            .bottom-navbar{
+              display: inline-block;
+            }
+          }
+          @media(max-width:450px){
+            html{
+              font-size: 50%;
+            }
+          }
+
+          /*-----Login-form----*/
+
+          .login-form-container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background:  rgb(255,255,255,0.9);
+            position:fixed;
+            right: -105%;
+            transition: right 0.3s ease;
+            z-index: 10000;
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+          }
+            .login-form-container.login-form{
+            right: 0;
+           }
+      
+          .login-form-container form{
+            background: #ffffff ;
+            border: var(--border);
+            width: 40rem;
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-radius: 0.5rem;
+            margin: /*2rem*/100px auto;
+          
+            position: relative;
+            max-width:400px;
+            max-height: 90vh;
+
+          }
+
+          .login-form-container form h3{
+            font-size: 2.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--black);
+          }
+          .login-form-container form span{
+            display: flex;
+            font-size:  1.5rem;
+            padding-top: 1rem;
+          }
+          .login-form-container form input{
+            font-size: 1.5rem;
+            margin-top: 1rem;
+          }
+          .login-form-container form .check-box{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 0;
+          }
+          .login-form-container form .check-box label{
+            font-size: 1.4rem; 
+            color: var(--black);
+          }
+           .login-form-container form .btn{
+            text-align: center;
+            width: 100%;
+            margin: 1.5rem 0;
+           }
+           .btn{
+            margin-top: 1rem;
+            display:inline-block;
+            padding: 0.9rem 3rem;
+            color:#ffffff;
+            border-radius: 0.5rem;
+            background: var(--blue);
+            border:1px solid var (--border);
+            font-size: 1.7rem;
+            cursor: pointer;
+            font-weight: 700;
+           }
+           .btn:hover{
+            background: var(--dark-color);
+
+           }
+           
+           .login-form-container form p{
+            padding-top: 0.8rem;
+            color: var (--light-color);
+            font-size: 1.5rem;
+           }
+           .login-form-container form p a{
+            text-decoration: underline;
+            color:var(--blue);
+
+           }
+           .login-form-container #close-login-btn{
+            position:absolute;
+            top:1.5rem;
+            right: 2.5rem;
+            font-size: 5rem;
+           }
