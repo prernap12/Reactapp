@@ -289,4 +289,155 @@ html ::-webkit-scrollbar{
             top:1.5rem;
             right: 2.5rem;
             font-size: 5rem;
+            cursor: pointer;
            }
+          
+           section{
+            padding: 5rem;
+           }
+            @media(max-width:991px){
+              section{
+                padding: 3rem 2rem;
+              }
+            }
+            .home{
+              background: url(../public/image/bgi.jpg);
+              background-position: center;
+              background-size: cover;
+            }
+            .home .row{
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 1.5rem;
+            }
+            .home .row .content{
+              flex: 1 1 42rem;
+            }
+            .home .row .content p{
+              color: var(--light-color);
+              font-size: 1.4rem;
+              line-height: 2;
+              padding: 1rem 0;
+            }
+            .home .swiper{
+              flex: 1 1 42rem;
+              margin-top: 2rem;
+              text-align: center;
+
+            }
+            .home .book-list .swiper-slide img{
+              height: 25rem;
+            }
+            .home .book-list .swiper-slide:hover img{
+              transform: scale(0.9);
+            }
+            .home .row .swiper .stand{
+              width: 100%;
+              margin-top: -17rem;
+            }
+            @media(max-width: 768px){
+              .home .row .content{
+                text-align: center;
+              }
+              .home .row.content h3{
+                font-size: 3.5rem;
+              }
+            }
+
+            /*=== iconsss ===*/
+            .icons-container{
+              display: grid;
+              grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+              gap: 1.5rem;
+            }
+            .icons-container .icons{
+              display: flex;
+              align-items: center;
+              gap: 1.5rem;
+            }
+            .icons-container .icons i{
+              font-size: 3.5rem;
+              color: var(--blue);
+              padding: 2rem 0;
+            }
+            .icons-container .icons p{
+              color: var(--light-color);
+            }
+            .icons-container .icons h3{
+              color: var(--light-color);
+              font-size: 2.2rem;
+              border-bottom: 0.5rem;
+            }
+            /*== features ==*/
+            .heading{
+              text-align: center;
+              margin-bottom: 2rem;
+              position: relative;
+            }
+            .heading ::before{
+              content: '';
+              position: absolute;
+              top:50%;
+              left: 0;
+              transform: translateY(-50%);
+              width: 100%;
+              height: 0.01rem;
+              background: rgba(0,0,0,0.1);
+              z-index: -1;
+            }
+            .heading span{
+              font-size: 3rem;
+              padding: 5rem 2rem;
+              color: var(--black);
+              border: var(--border);
+              background: #ffffff;
+            }
+            .featured .featured-slider .box{
+              width: 30rem;
+              margin: 2rem;
+              position: relative;
+              overflow: hidden;
+              border: var(--border);
+              text-align: center;
+            }
+            .featured .featured-slider .box:hover{
+              border: var(--border-hover);
+            }
+            .featured .featured-slider .box .image{
+              padding: 1rem;
+              background: linear-gradient(15deg, #eee 30%, #eee 30.1% );
+            }
+            .featured .featured-slider .box .image img{
+              height: 25rem;
+            }
+            .featured .featured-slider .box:hover .image{
+              transform: translateY(6rem);
+              cursor: pointer;
+            }
+            .featured .featured-slider .box .icons{
+              border-bottom: var(--border-hover);
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: #ffff;
+              z-index: 1;
+              transform: translateY(-100%);
+              border: var(--border);
+              height: 55px;
+            }
+            .featured .featured-slider .box .icons{
+              transform: translateY(0);
+            }
+            .featured .featured-slider .box .icons a{
+              color: var(--black);
+              font-size: 2.2rem;
+              padding: 1.3rem 1.5rem;
+              line-height: 50px;
+            }
+            .featured .featured-slider .box .icons a:hover{
+              background: var(--blue);
+              color: #fff;
+            }
+         
