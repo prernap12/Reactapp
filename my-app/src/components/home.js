@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from './navbar';
-import { FaPlane, FaLock, FaSearch,FaHeart,FaEye} from "react-icons/fa";
+import { FaPlane, FaLock, FaSearch,FaHeart,FaEye,FaStar,FaStarHalf} from "react-icons/fa";
 import {FaHeadset} from "react-icons/fa";
 // Import Swiper styles
 import { Swiper,SwiperSlide } from "swiper/react";
@@ -46,7 +46,30 @@ const Home = () => {
         loop:true,
         centeredSlides:true,
         spaceBetween:10,
-    }
+    };
+    const swiperOptionThree={
+            breakpoints:{
+            0:{
+                slidesPerView:1,
+                spaceBetween:10,
+
+            },
+            450:{
+            slidesPerView:2,
+            spaceBetween:10,
+            },
+            768:{
+                slidsPerView:3,
+                spaceBetween:10,
+            },
+            1024:{
+                slidesPerView:3,
+            },
+        },
+        loop:true,
+        centeredSlides:true,
+        spaceBetween:10,
+    };
     return (
         <div className="home-container">
            <Navbar />
@@ -210,6 +233,122 @@ const Home = () => {
                 </Swiper>
             </div>
            </section>
+
+           <section className="newsletter">
+            <form action="">
+                <h3>subscribe for the latest update</h3>
+                <input type="email" placeholder="enter your email" className="box"/>
+                <input type="submit" placeholder="subscribe" className="btn"/>
+            </form>
+           </section>
+           <section className="arrivals" id="arrivals">
+            <div className="heading"><span>new arrivals</span></div>
+            <div className="swiper">
+                <Swiper
+                        watchSlidesProgress={true}
+                        autoplay={{
+                            delay:3500,
+                            disableOnInteraction:false
+                        }}
+                modules={[Autoplay]}
+                className="arrivals-slider"
+                {...swiperOptionThree}
+              >
+
+                <SwiperSlide>
+                    <a href="\#" className="box">
+                        <div className="image">
+                            <img src="image/book1.jpg" alt=""/>
+                        </div>
+                        <div className="content">
+                            <h3>new arrivals</h3>
+                            <div className="price">Rs 2980 <span> Rs 1999</span></div>
+                            <div className="stars">
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStarHalf/></i>
+                            </div>
+                        </div>
+                    </a>
+                    </SwiperSlide>
+                     <SwiperSlide>
+                    <a href="\#" className="box">
+                        <div className="image">
+                            <img src="image/book5.jpg" alt=""/>
+                        </div>
+                        <div className="content">
+                            <h3>new arrivals</h3>
+                            <div className="price">Rs 2980 <span> Rs 1999</span></div>
+                            <div className="stars">
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStarHalf/></i>
+                            </div>
+                        </div>
+                    </a>
+                    </SwiperSlide>
+                     <SwiperSlide>
+                    <a href="\#" className="box">
+                        <div className="image">
+                            <img src="image/book2.jpg" alt=""/>
+                        </div>
+                        <div className="content">
+                            <h3>new arrivals</h3>
+                            <div className="price">Rs 2980 <span> Rs 1999</span></div>
+                            <div className="stars">
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStarHalf/></i>
+                            </div>
+                        </div>
+                    </a>
+                    </SwiperSlide>
+                     <SwiperSlide>
+                    <a href="\#" className="box">
+                        <div className="image">
+                            <img src="image/book3.jpg" alt=""/>
+                        </div>
+                        <div className="content">
+                            <h3>new arrivals</h3>
+                            <div className="price">Rs 2980 <span> Rs 1999</span></div>
+                            <div className="stars">
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStarHalf/></i>
+                            </div>
+                        </div>
+                    </a>
+                    </SwiperSlide>
+                     <SwiperSlide>
+                    <a href="\#" className="box">
+                        <div className="image">
+                            <img src="image/book4.jpg" alt=""/>
+                        </div>
+                        <div className="content">
+                            <h3>new arrivals</h3>
+                            <div className="price">Rs 2980 <span> Rs 1999</span></div>
+                            <div className="stars">
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStar/></i>
+                                <i><FaStarHalf/></i>
+                            </div>
+                        </div>
+                    </a>
+                    </SwiperSlide>
+              </Swiper>
+            </div>
+           </section>
+           
          </div>
     )
 }
